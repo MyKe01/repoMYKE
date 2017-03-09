@@ -1,0 +1,14 @@
+vettore globale con stringhe
+vettore = rubrica
+all'interno liste con contatti
+add contact (nome , cognome , numero) stringhe
+'print contact' scrive il contatto 
+due funzioni con lo stesso nome ma per argomenti diversi
+ricavare indice di una persona e poi con print contact mostra nome cognome e numero
+|nome          |cognome         | numero         |
+stringa non superiore ai 30 char
+funzione rpad(stringa, char = 30, '...') --> stringa
+princontacts(skip, limit)
+getindex off(nome, cognome)
+remove(n, c)
+
