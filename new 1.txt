@@ -1,0 +1,25 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int getindexoff(string nome, string cognome, string numero){
+}
+
+int addcontact(string nome, string cognome, string numero){
+}
+
+void mostracontatto(string nome , string cognome){
+}
+
+void mostracontatto(string index){
+}
+
+int main(){
+string nome, cognome, numero;
+int contatti;
+vector <string> rubrica;
+
+}
+
+
