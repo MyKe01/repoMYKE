@@ -2,28 +2,141 @@
 #include <vector>
 #include <string>
 #include <algorithm>
+#include <windows.h>
+#include <stdlib.h> 
+#include <conio.h>
 using namespace std;
 
-int getindexoff(string nome, string cognome, string numero){
+*/
+1 = Blue 2 = Green 3 = Light Blue 4 = Red 5 = Purple 
+6 = Orange/Brown 7 = White 8 = Grey 9 = Blue 
+10 = Green 11 = Light Blue 12 = Pink/Red 13 = Purple
+14 = Yellow 15 = While 
+/*
+
+void SetColor(short Color) 
+{ 
+HANDLE hCon = GetStdHandle(STD_OUTPUT_HANDLE); // oppure system("COLOR E9"); 
+SetConsoleTextAttribute(hCon,Color); 
 }
 
-int addcontact(string nome, string cognome, string numero){
+int  getindexoff(string name, string surname, string number){
+SetColor(0A);
+cout<<"+-------------------------------------------------------------------------+"<<endl;
+cout<<"                   0 PER TORNARE AL MENU PRINCIPALE                        "<<endl;
+cout<<"+-------------------------------------------------------------------------+"<<endl;
+cin<<command;
+if(command==0){
+	int main();
+	}
 }
 
-void mostracontatto(string nome , string cognome){
+int  addcontact(string name, string surname, string number, string nome, string cognome, string numero){
+SetColor(0A);
+cout<<"+-------------------------------------------------------------------------+"<<endl;
+cout<<" inserisci il nome, il cognome e il numero(per terminare l'input premi 0): "<<endl;
+while(name!=0){
+	cin>> nome >> cognome >> numero;
+	name.push_back(nome);
+	surname.push_back(cognome);
+	number.push_back(numero);
+}
+cout<<"                   1 PER AGGIUNGERE ALTRI CONTATTI  		                  "<<endl;
+cout<<"                   0 PER TORNARE AL MENU PRINCIPALE                        "<<endl;
+cout<<"+-------------------------------------------------------------------------+"<<endl;
+cin<<command;
+if(command==0){
+	int main();
+	}else{ 
+	addcontact(string name, string surname, string number, string nome, string cognome, string numero);
+	}
 }
 
-void mostracontatto(string index){
+void showcontact(string name , string surname){
+SetColor(0A);
+cout<<"+-------------------------------------------------------------------------+"<<endl;
+cout<<"                   0 PER TORNARE AL MENU PRINCIPALE                        "<<endl;
+cout<<"+-------------------------------------------------------------------------+"<<endl;
+cin<<command;
+if(command==0){
+	int main();
+	}
+}
+
+void showcontact(string index){
+SetColor(0A);
+cout<<"+-------------------------------------------------------------------------+"<<endl;;
+cout<<" "<<i<<"- "<<name[index]<<"; "<<surname[index]<<"; "<<number[index]<<endl;
+cout<<"                   0 PER TORNARE AL MENU PRINCIPALE                        "<<endl;
+cout<<"+-------------------------------------------------------------------------+"<<endl;
+cin<<command;
+if(command==0){
+	int main();
+	}
+}
+
+void deletecontact(string name, string surname, string number){
+SetColor(0A);
+cout<<"+-------------------------------------------------------------------------+"<<endl;
+cout<<"                   0 PER TORNARE AL MENU PRINCIPALE                        "<<endl;
+cout<<"+-------------------------------------------------------------------------+"<<endl;
+cin<<command;
+if(command==0){
+	int main();
+	}
+}
+
+void showall(int contatti){
+SetColor(0A);
+cout<<"+-------------------------------------------------------------------------+"<<endl;
+for(int i<contact){
+	cout<<i<<"- "<<name[i]<<"; "<<surname[i]<<"; "<<number[i]<<endl;
+	}
+cout<<"                       0 FOR RETURN TO MAIN MENU                    "<<endl;
+cout<<"+-------------------------------------------------------------------------+"<<endl;
+cin<<command;
+if(command==0){
+	int main();
+	}
 }
 
 int main(){
+string name, surname, number;
 string nome, cognome, numero;
-int contatti;
+int contact,comando;
 vector <string> rubrica;
-vector <string> nome;
-vector <string> cognome;
-vector <float> numero;
-
+vector <string> name;
+vector <string> surname;
+vector <string> number;
+SetColor(0E);
+cout<<"+----------------------------------------------+"<<endl;
+cout<<"|           	      RUBRICA                     |"<<endl;
+cout<<"|     1 per aggiungere un contatto             |"<<endl;
+cout<<"|     2 per cercare un contatto e stamparlo    |"<<endl;
+cout<<"|     3 per rimuovere un contatto              |"<<endl;
+cout<<"|     4 per stampare tutti i contatti          |"<<endl;
+cout<<"|     0 per uscire o terminare l'input         |"<<endl;
+cout<<"+----------------------------------------------+"<<endl;
+cin<<comando<<endl;
+if(comando==1){
+	addcontact(name, surname, number);
+}
+if(comando==2){
+	getindex(name, surname, number);
+	showcontact(index);
+	showcontact(name, surname);
+}
+if(comando==3){
+	deletecontact(name, surname, number);
+}
+if(comando==4){
+	showall(contact);
+}
+if(comando==0){
+	cout<<"Arrivederci"
+	return 0;
+}
+return 0;
 }
 
 
