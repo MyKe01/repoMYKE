@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <string>
 #include <algorithm>
 using namespace std;
 
@@ -19,6 +20,9 @@ int main(){
 string nome, cognome, numero;
 int contatti;
 vector <string> rubrica;
+vector <string> nome;
+vector <string> cognome;
+vector <float> numero;
 
 }
 
