@@ -3,25 +3,32 @@
 #include <vector>
 using namespace std;
 int main() {
+<<<<<<< HEAD
 	vector <string> nome;
 	vector <string> cognome;
 	vector <char> numero;
 	string a,b;
 	char c;
+=======
+	vector <char> nome;
+	vector <char> cognome;
+	vector <char> numero;
+	char a, b, c;
+>>>>>>> 20b68c056cb0e103646afcd416f4e36d60dc246c
 	cout << "RICORDARE DI INSERIRE GLI SPAZI TRA I CARATTERI" << endl;
 	cout << "inserire il nome : ";
 	do {
 		cin >> a;
 		nome.push_back(a);
 	}
-	while(a!=".");
-		cout << " inserire il cognome: ";
+	while(a!='.');
+		cout << "inserire il cognome: ";
 	do {
 		cin >> b;
 		cognome.push_back(b);
 	}
-	while(b!=".");
-	cout << " inserire il numero di telefono: ";
+	while(b!='.');
+	cout << "inserire il numero di telefono: ";
 	do {
 		cin >> c;
 		numero.push_back(c);
@@ -39,7 +46,7 @@ int main() {
 			cout << nome[i];
 		}
 	}
-	cout << " cognome: ";
+	cout << "; cognome: ";
 	int l_cognome=cognome.size();
 	if(l_cognome>30) {
 		for(int i=0; i<29; i++) {
@@ -51,7 +58,7 @@ int main() {
 			cout << cognome[i];
 		}
 	}
-	cout << " numero di telefono: ";
+	cout << "; numero di telefono: ";
 	int l_numero=numero.size();
 	if(l_numero>30){
 		for(int i=0; i<29; i++){
