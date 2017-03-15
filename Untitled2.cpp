@@ -5,8 +5,9 @@ using namespace std;
 int main() {
 	vector <string> nome;
 	vector <string> cognome;
-	vector <string> numero;
-	string a,b,c;
+	vector <char> numero;
+	string a,b;
+	char c;
 	cout << "RICORDARE DI INSERIRE GLI SPAZI TRA I CARATTERI" << endl;
 	cout << "inserire il nome : ";
 	do {
@@ -25,7 +26,7 @@ int main() {
 		cin >> c;
 		numero.push_back(c);
 	}
-	while(c!=".");
+	while(c!='.');
 	cout << "nome: ";
 	int l_nome=nome.size();
 	if(l_nome>30) {
@@ -40,7 +41,7 @@ int main() {
 	}
 	cout << " cognome: ";
 	int l_cognome=cognome.size();
-	if(l_cognome!=30) {
+	if(l_cognome>30) {
 		for(int i=0; i<29; i++) {
 			cout << cognome[i];
 		}
@@ -52,8 +53,8 @@ int main() {
 	}
 	cout << " numero di telefono: ";
 	int l_numero=numero.size();
-	if(l_numero>30) {
-		for(int i=0; i<29; i++) {
+	if(l_numero>30){
+		for(int i=0; i<29; i++){
 			cout << numero[i];
 		}
 	}
