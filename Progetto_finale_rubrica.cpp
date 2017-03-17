@@ -26,42 +26,47 @@ HANDLE hCon = GetStdHandle(STD_OUTPUT_HANDLE); // oppure system("COLOR E9");
 SetConsoleTextAttribute(hCon,Color); 
 }
 
-/*int  getindexoff(){
+int  getindexoff(int contact,int nome,int cognome,int numero){
 SetColor( 0);
-
-cout<<"+-------------------------------------------------------------------------+"<<endl;
-cout<<"                   0 PER TORNARE AL MENU PRINCIPALE                        "<<endl;
-cout<<"+-------------------------------------------------------------------------+"<<endl;
-cin>>command;
-if(command==0){
-	int main();
+//cout<<"+-------------------------------------------------------------------------+"<<endl;
+for(int i;i<contact;i++){
+	if(numero==numero[i] || nome==name[i] || cognome==surname[i]){
+		index=i;
 	}
-}*/
+}
+//cout<<"                   0 PER TORNARE AL MENU PRINCIPALE                        "<<endl;
+//cout<<"+-------------------------------------------------------------------------+"<<endl;
+//cin>>command;
+//if(command==0){
+//	int main();
+//	}
+	return index;
+}
 
 int  addcontact(int contatti) {
 SetColor(0);
 	char a,b,c;
     cout<<"+----------------------------------------------------------------------------------+"<<endl;
 	cout << "RICORDARE DI INSERIRE GLI SPAZI TRA I CARATTERI E DI TERMINARE CON IL CARATTERE'.''" << endl;
-	cout << "inserire il nome : ";
+	cout << "INSERISCI IL NOME : "<<endl;
 	do {
 		cin >> a;
 		name.push_back(a);
 	}
 	while(a!='.');
-		cout << "inserire il cognome: ";
+		cout << "INSERISCI IL COGNOME: "<<endl;
 	do {
 		cin >> b;
 		surname.push_back(b);
 	}
 	while(b!='.');
-	cout << "inserire il numero di telefono: ";
+	cout << "INSERISCI IL NUMERO DI TELEFONO: "<<endl;
 	do {
 		cin >> c;
 		number.push_back(c);
 	}
 	while(c!='.');
-	cout << "nome: ";
+	cout << "NOME: "<<endl;
 	int l_nome=name.size();
 	if(l_nome>30) {
 		for(int i=0; i<29; i++) {
@@ -73,7 +78,7 @@ SetColor(0);
 			cout << name[i];
 		}
 	}
-	cout << "; cognome: ";
+	cout << " cognome: "<<endl;
 	int l_cognome=surname.size();
 	if(l_cognome>30) {
 		for(int i=0; i<29; i++) {
